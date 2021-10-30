@@ -1,14 +1,18 @@
 package com.stock.stockidea.entity;
 
-import java.sql.Date;
+
+import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.annotation.Id;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Data
 @Getter
 @Setter
 @AllArgsConstructor
@@ -23,4 +27,5 @@ public class StockIdea {
     private String comments;
     private Date dateCreated;
     private Date timestamp;
+   private List<String> companyNames;
 }

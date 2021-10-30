@@ -19,8 +19,8 @@ public List<StockIdea> getAllStockIdea(){
 public StockIdea getStockIdeaById(String id){
     return stockIdeaRepository.findById(id).get();
 }
-public List<StockIdea> addAllStockIdea(List<StockIdea> stockIdea){
-   return stockIdeaRepository.saveAll(stockIdea);
+public StockIdea addAllStockIdea(StockIdea stockIdea){
+   return stockIdeaRepository.save(stockIdea);
 }
 public void updateStockIdea(StockIdea stockIdea){
     stockIdeaRepository.save(stockIdea);
